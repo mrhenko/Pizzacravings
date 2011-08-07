@@ -1,0 +1,4 @@
+/*
+	This file is for the JS that is needed to make
+	the app work.
+*/

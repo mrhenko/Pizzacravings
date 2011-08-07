@@ -88,7 +88,7 @@ body article > section:first-of-type {
 }
 
 /* Slightly bigger screens (tablets etc.), 2 columns */
-@media all and (min-width: 580px) {
+@media all and (min-width: 480px) {
 	body {
 		width: 100%;
 		position: relative;
@@ -112,8 +112,23 @@ body article > section:first-of-type {
 	}
 }
 
+@media all and (min-width: 480px) and (max-width: 780px) {
+	body article > section:nth-of-type(4) {
+		position: absolute;
+		left: 50%;
+		margin-left: -24.21875%;
+		margin-top: 9em;
+		text-align: center;
+	}
+	body article > section:nth-of-type(5), body article > section:nth-of-type(3) {
+		position: absolute;
+		top: 21em;
+	}
+	body article > section:nth-of-type(5) {right: 0px; margin-right: 0%;}
+}
+
 /* Sizing it up and using 3 columns */
-@media all and (min-width: 640px) {
+@media all and (min-width: 780px) {
 	body article > section {
 		width: 31.25%;
 		margin-right: 3.125%;
