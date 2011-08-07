@@ -28,9 +28,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -47,3 +44,45 @@ table {
 	border-spacing: 0;
 }
 
+/* First, typography */
+body {
+	font-family: "Helvetica Neue", Helvetica;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+h1, h2 {font-weight: bold}
+h1 {font-size: 2em; line-height: 2em;}
+h2 {font-size: 1.5em; line-break: 1em;}
+
+/* Basic apperance */
+body {background: #ccc;}
+
+body > header {
+	border-bottom: 1px solid #000;
+	text-align: center;
+	
+	background: rgb(169,3,41); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,3,41,1)), color-stop(44%,rgba(143,2,34,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C */
+	color: #fff;
+}
+
+body article {
+	padding: 1em 0.5em;
+}
+body article > section {
+	margin: 1em 0;
+	padding: 1em 0.5em;
+	border: 1px solid #000;
+	border-radius: 5px;
+	
+	background: #fff;
+}
+
+body article > section:first-of-type {
+	margin-top: 0;
+}
