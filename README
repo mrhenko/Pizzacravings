@@ -1,0 +1,5 @@
+Pizza Cravings
+
+Pizza Cravings is a web app that uses the users current location
+and the API of Gowalla and 4Square to locate some pizzerias in
+the vicinity of the user.
