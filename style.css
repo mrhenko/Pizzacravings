@@ -1,48 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+html, body, div, span, h1, h2, h3, h4, p, blockquote, a, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
 
 /* First, typography */
 body {
@@ -57,7 +17,7 @@ h2 {font-size: 1.5em; line-break: 1em;}
 /* Basic apperance */
 body {background: #ccc;}
 
-body > header {
+body > header, input[type=submit] {
 	border-bottom: 1px solid #000;
 	text-align: center;
 	
@@ -87,8 +47,30 @@ body article > section:first-of-type {
 	margin-top: 0;
 }
 
+section:nth-of-type(4) {text-align: center;}
+input[type=submit] {
+	width: 80%;
+	font-size: 1em;
+	line-height: 1.5em;
+	border: 1px solid rgb(169,3,41);
+	border-radius: 10px;
+}
+
+section#result {
+	position: absolute;
+	top: 57px;
+	left: 2%;
+	width: 92.5%;
+	display: none;
+	-webkit-box-shadow: 0 0 4px #000, 2px 2px 4px rgba(0,0,0,0.5), -2px -2px 6px rgba(0,0,0,0.3);
+	box-shadow: 0 0 4px #000, 2px 2px 4px rgba(0,0,0,0.5), -2px -2px 6px rgba(0,0,0,0.3);
+}
+#result:target {
+	display: block;
+}
+
 /* Slightly bigger screens (tablets etc.), 2 columns */
-@media all and (min-width: 480px) {
+@media all and (min-width: 481px) {
 	body {
 		width: 100%;
 		position: relative;
@@ -101,7 +83,6 @@ body article > section:first-of-type {
 	body article > section {
 		-webkit-box-sizing: border-box;
 		width: 48.4375%;
-		//width: 50%;
 		float: left;
 		margin: 0;
 		
@@ -112,12 +93,12 @@ body article > section:first-of-type {
 	}
 }
 
-@media all and (min-width: 480px) and (max-width: 780px) {
+@media all and (min-width: 481px) and (max-width: 780px) {
 	body article > section:nth-of-type(4) {
 		position: absolute;
 		left: 50%;
 		margin-left: -24.21875%;
-		margin-top: 9em;
+		//margin-top: 9em;
 		text-align: center;
 	}
 	body article > section:nth-of-type(5), body article > section:nth-of-type(3) {
